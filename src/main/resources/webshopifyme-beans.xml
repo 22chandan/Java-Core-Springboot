@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<bean id="Customer" class="com.webshopify.beans.Customer">
+    <property name="Id" value="123"/>
+    <property name="name" value="Chandan"/>
+</bean>
+    <bean id="CreditCardAccounts" class="com.webshopify.beans.CreditCardAccounts">
+        <property name="cardLimit" value="123.3"/>
+<!--        <property name="cardId" value="12"/>-->
+    </bean>
+
+</beans>
