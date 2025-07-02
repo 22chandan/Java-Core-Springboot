@@ -1,28 +1,31 @@
-package com.webshopify.beans;
+package com.webshopify.beans.di;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Customer implements Serializable {
     public int Id;
     public String name;
-    @Autowired
-    public LoanAccounts loanAccounts;
+    public List<LoanAccounts> loanAccounts;
+
+    public void setLoanAccounts(List<LoanAccounts> loanAccounts) {
+        this.loanAccounts = loanAccounts;
+    }
 
     public Customer(){
         System.out.println("I am starting");
     }
 
-    public LoanAccounts getLoanAccounts(){
+    public List<LoanAccounts> getLoanAccounts(){
         return loanAccounts;
     }
 
-    // Add @Autowired to setter method
-    @Autowired
-    public void setLoanAccounts(LoanAccounts loanAccounts) {
-        this.loanAccounts = loanAccounts;
-    }
+
+//    public void setLoanAccounts(LoanAccounts loanAccounts) {
+//        this.loanAccounts = loanAccounts;
+//    }
 
     public int getId() {
         return Id;
